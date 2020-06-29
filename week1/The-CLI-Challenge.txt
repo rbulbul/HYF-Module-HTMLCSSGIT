@@ -1,0 +1,46 @@
+CLI CHALLENGE
+
+Q1. How do I create a hidden file or folder? How do I display it in the CLI? How do I display it in the CLI?
+
+Answer:  
+  You have a few ways to do that. Here the explanation of this;
+  a) Rename
+    When you create a file with "touch" command or a folder with "mkdir" command, you can rename that file or folder with ". (dot)" at the begining of name.
+    Then you will be able to have your hidden files or folder instead visible ones.
+
+    To create a file, you will use "touch filename.txt" command. The command you should use will be "mv filename.txt .filename." in order to rename and make it unvisible. The last dot will be dropped, you'll have ".file"
+    Use the same method above to create a folder "mkdir foldername". Then "mv foldername .foldername." will help you to recreate visible folder to make it unvisible.
+
+    Works the same with a file or a directory.
+
+  b) Via Directly CLI
+    to create a hidden file or folder directly, use the "echo, touch or mkdir command" while adding "." before and after file/foldername.
+
+      File : echo > .filename or touch .filename. (the last dot will be dropped, you'll have .file)
+      Directory: mkdir .foldername
+
+  * To display them use "ls -a" command to display all hidden dot files. The -a option do not hide entries starting with . in the current directory or given path. 
+
+Q2. How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
+
+Answer:
+    To create a new directory with multiple subdirectories you only need to type the following command at the prompt and press Enter 
+    (Change the directory names to what you want).
+
+    The command would be; "mkdir -p /articles/images/note/done, go on.."
+    * The -p flag tells the mkdir command to create the main directory first if it doesn’t already exist 
+
+Q3. How do i append a message to a file, without a newline character, so the output would be: (Actually I think the question would be asked with a newline character,
+otherwise If you do "cat" command to see the file index, you can't have a output like this. if you really want to add some content on your file, you do this command;
+"echo -n "some text here" >> file.txt", then you will have without a newline instead.)
+    first message
+    second message
+
+But If we'd like to have our output like above, the answer would probably be:
+  1. step add first message to the file you want to create, using this command: echo "first message" > file.txt
+  2. step is adding second message, and: echo "second message" >> file.txt
+
+  Then the output will be such as you want..
+
+
+
