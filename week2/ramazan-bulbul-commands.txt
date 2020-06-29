@@ -1,0 +1,13 @@
+1- git log -- <filename>
+
+We can see commit's log that affect the specific file when we commited it. 
+if we deleted with a commit with "git -rm <filename>" command in git history, we can save and return that commit. 
+
+
+to do that,with this command you'll see hash number in the beginning of that log record. 
+when you see where you added, take the 5 carachter so that we will do something with that commit, then;
+
+2- git checkout (5 chrachter of Hash Number) -- <filename>
+
+with this command, when you check git status, you would prabably see you saved that history and return that commit, 
+and there will be both on staging and your working area.
